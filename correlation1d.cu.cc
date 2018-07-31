@@ -336,7 +336,7 @@ __global__ void CorrelateDataBackward1_1d(const int nthreads,
     {
         int k = index % in_channels;                                     // channels
         int x = (index / in_channels) % in_width + pad_size;             // w-pos
-        int y = (index / in_channels / in_width) % in_height + pad_size; // h-pos
+        int y = (index / in_channels / in_width) % in_height;            // h-pos
 
         // round_off is a trick to enable integer division with ceil, even for
         // negative numbers
