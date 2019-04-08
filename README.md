@@ -14,6 +14,6 @@ $ python
 >>> x2 = tf.random_normal([1, 10, 10, 4])
 >>> conv_x1 = tf.layers.conv2d(x1, 10, 3, 1, 'same', name='conv_x1')
 >>> conv_x2 = tf.layers.conv2d(x2, 10, 3, 1, 'same', name='conv_x2')
->>> corr = tf.correlation1d(conv_x1, conv_x1, 1, 4, 1, 1, 4)
+>>> corr = correlation1d(conv_x1, conv_x1, 1, 4, 1, 1, 4)
 >>> grad_corr2x1 = tf.gradients(corr, x1)
 ```
